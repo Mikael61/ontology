@@ -1,117 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="https://www.w3.org/TR/rdf-schema/"
-	xmlns="http://github.com/Mikael61/ontology#" 
+	xmlns:low="http://github.com/Mikael61/ontology/" 
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-	<rdf:Description rdf:about="Utbildningsprogram">
+	<rdf:Description rdf:about="#Utbildningsprogram">
 		<rdf:type rdf:resource="rdfs:Class"/>
 		<rdfs:label>Utbildningsprogram</rdfs:label>
 		<skos:prefLabel>Utbildningsprogram</skos:prefLabel>
 	</rdf:Description>
-	<rdf:Description rdf:about="NGW_K">
+	<rdf:Description rdf:about="#NGW_K">
 		<rdfs:label>Webbredaktörsprogrammen</rdfs:label>
 		<rdf:comment>Avser Webbredaktörsprogrammet, såväl distans som campus</rdf:comment>
-		<rdf:type rdf:resource="Utbildningsprogram"/>
+		<rdf:type rdf:resource="#Utbildningsprogram"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="Kurs">
+	<rdf:Description rdf:about="#Kurs">
 		<rdf:type rdf:resource="rdfs:Class"/>
 		<rdfs:label>Kurs</rdfs:label>
 		<skos:prefLabel>Kurs</skos:prefLabel>
 	</rdf:Description>
-	<rdf:Description rdf:about="Outcome">
-		<rdf:type rdf:resource="rdfs:Class"/>
-		<rdfs:label>Outcome</rdfs:label>
-		<skos:prefLabel>Lärandemål</skos:prefLabel>
-	</rdf:Description>
-	<rdf:Description rdf:about="Implementerar">
-		<rdf:type rdf:resource="rdf:Property"/>
-		<rdfs:label>Implementerar</rdfs:label>
-		<skos:definition>Definierar relationen mellan ett mål i en kurs (subjekt) och ett mål i ett utbildningsprogram (objekt)</skos:definition>
-	</rdf:Description>
-	<rdf:Description rdf:about="Examinerar">
-		<rdf:type rdf:resource="rdf:Property"/>
-		<rdfs:label>Examinerar</rdfs:label>
-		<rdfs:comment>Anger till vilken kurs eller utbildning lärandemålet hör </rdfs:comment>
-	</rdf:Description>
-	<rdf:Description rdf:about="Supportar">
-		<rdf:type rdf:resource="rdf:Property"/>
-		<rdfs:label>Supportar</rdfs:label>
-		<rdfs:comment>Anger en stödjande funktion i relation till ett specifikt utbildningsmål, utan att närmare precisera hur. </rdfs:comment>
-	</rdf:Description>
 	
 <!-- Kurser -->	
-	<rdf:Description rdf:about="31KUW1">
-		<rdf:type rdf:resource="Kurs"/>
+	
+	<low:Kurs rdf:about="#31KCM1">
+		<low:Examinerar>
+			<low:Outcome>
+				<rdf:li>Definiera, och beskriva relationerna mellan, centrala begrepp för content management.</rdf:li><rdf:li>
+				Redogöra för principer för informationsarkitektur för organisation av innehåll.</rdf:li><rdf:li>
+				Grunderna i sökmotoroptimering (SEO) och dess relation till metadata, struktur och informationsarkitektur hos webbsidor.</rdf:li><rdf:li>
+				Anpassa en navigationsstruktur för en webbplats efter olika målgrupper och enheter.</rdf:li><rdf:li>
+				Analysera och beskriva informationsarkitekturen hos en webblösning.</rdf:li><rdf:li>
+				Utföra en nyckelordsanalys av en webbsidas informationsarkitektur.</rdf:li><rdf:li>
+				Värdera och vetenskapligt argumentera för ändamålsenligheten hos en informationsarkitektur.</rdf:li><rdf:li>
+				Visa förmåga att värdera strategier för content management med hänsyn till hållbar webbutveckling.
+				</rdf:li>
+			</low:Outcome>
+		</low:Examinerar>
+	</low:Kurs>
+	
+	<rdf:Description rdf:about="#31KUW1">
+		<rdf:type rdf:resource="#Kurs"/>
 		<rdfs:label>31KUW1</rdfs:label>
 		<rdfs:comment>Utgångspunkter för webbplatsutveckling</rdfs:comment>
+		<low:Supportar rdf:resource="#K1"/>
+		<low:Supportar rdf:resource="#K3"/>
+		<low:Supportar rdf:resource="#K5"/>
+		<low:Supportar rdf:resource="#V1"/>
+
+		<low:Outcome>
+			Visa kunskap om och förståelse för grundläggande begrepp, problem, teorier och metoder inom informationsarkitektur och
+			användarcentrerad design.
+		</low:Outcome>
+		<low:Outcome>
+			Redogöra för och diskutera centrala aspekter av projektkompetens och projektarbete som arbetsform med fokus på
+			webbprojekt.
+		</low:Outcome>
+		<low:Outcome>
+			Visa grundläggande kunskap om akademiskt skrivande, källkritik samt vetenskapens grunder och förutsättningar.
+		</low:Outcome>
+		<low:Outcome>
+			Identifiera och analysera användningsorienterade problem relaterade till informations- och kommunikationsteknik (IKT) i			webbkontexter.
+		</low:Outcome>
+		<low:Outcome>
+			Tillämpa vedertagna principer för informationsarkitektur och användarcentrerad design vid kritisk granskning av
+			webbplatser.
+		</low:Outcome>
+		<low:Outcome>
+			Med utgångspunkt i kurslitteraturen skriftligt eller muntligt presentera och diskutera ett webbprojekt.
+		</low:Outcome>
+		<low:Outcome>
+			Självständigt identifiera och värdera hållbarhetsaspekter (etiska, sociala och miljömässiga) med avseende på
+			webbplatsutveckling och användarcenterad design.
+		</low:Outcome>
+		<low:Outcome> Självständigt söka och värdera information i relevanta databaser och andra
+			typer av källor </low:Outcome>
+		
+		
 	</rdf:Description>
-	<rdf:Description rdf:about="31KCM1">
-		<rdf:type rdf:resource="Kurs"/>
+	
+	<rdf:Description rdf:about="#31KUW1_K1">
+		<rdf:type rdf:resource="#Outcome"/>
+		<rdfs:comment>Visa kunskap om och förståelse för grundläggande begrepp, problem, teorier och metoder inom informationsarkitektur och användarcentrerad design</rdfs:comment>
+		<low:Examinerar rdf:resource="#K1"/>
+		<low:Examinerar rdf:resource="#K3"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="#31KCM1">
+		<rdf:type rdf:resource="#Kurs"/>
 		<rdfs:label>31KCM1</rdfs:label>
 		<rdfs:comment>Content management</rdfs:comment>
+		<low:Supportar rdf:resource="#K1"/>
+		<low:Supportar rdf:resource="#K3"/>
+		<low:Supportar rdf:resource="#F1"/>
+		<low:Supportar rdf:resource="#F2"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="31KBG1">
-		<rdf:type rdf:resource="Kurs"/>
+	<rdf:Description rdf:about="#31KBG1">
+		<rdf:type rdf:resource="#Kurs"/>
 		<rdfs:label>31KBG1</rdfs:label>
 		<rdfs:comment>Bild och grafisk produktion</rdfs:comment>
+		<low:Supportar rdf:resource="#F3"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="31KTW1">
-		<rdf:type rdf:resource="Kurs"/>
+	<rdf:Description rdf:about="#31KTW1">
+		<rdf:type rdf:resource="#Kurs"/>
 		<rdfs:label>31KTW1</rdfs:label>
 		<rdfs:comment>Tekniker för webbdesign</rdfs:comment>
+		<low:Supportar rdf:resource="#K1"/>
+		<low:Supportar rdf:resource="#K3"/>
+		<low:Supportar rdf:resource="#F2"/>
 	</rdf:Description>
 	
 	
 	
 <!-- Utbildningsmål  -->	
-	<rdf:Description rdf:about="K1">
+	<rdf:Description rdf:about="#K1">
 		<rdfs:label>ha goda kunskaper om etablerade begrepp, principer och metoder för att strukturera och designa effektiva webbaserade informationsmiljöer</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
-		<examines rdf:resource="NGW_K"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="K2">
+	<rdf:Description rdf:about="#K2">
 		<rdfs:label>kunna redogöra för aktuella forskningsfrågor och ha fördjupade kunskaper i något delområde inom huvudområdet informationsarkitektur</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="K3">
+	<rdf:Description rdf:about="#K3">
 		<rdfs:label>förstå innebörden av användarcentrerad webbdesign och vad begreppen användbarhetm tillgänglighet och användarupplevelse implicerar för utvecklingen av målgruppsanpassade webbplatser</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="K4">
+	<rdf:Description rdf:about="#K4">
 		<rdfs:label>ha kunskap om aktuella juridiska förutsättningar som berör webbaserad informationshantering inom olika organisationer och förstå deras praktiska konsekvenser</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="K5">
+	<rdf:Description rdf:about="#K5">
 		<rdfs:label>uppvisa goda kunskaper om vetenskaplig dokumentation, dess formalia och uttrycksformer</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="F1">
+	<rdf:Description rdf:about="#F1">
 		<rdfs:label>kunna strukturera och tillgängliggöra användaranpassad aktuell och tillförlitlig information och tjänster i webbaserade miljöer för att effektivt uppnå avsedda mål och syften</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="F2">
+	<rdf:Description rdf:about="#F2">
 		<rdfs:label>kunna ansvara för det tekniska underhållet och utvecklingen av webbaserade informationsmiljöer och tjänster</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="F3">
+	<rdf:Description rdf:about="#F3">
 		<rdfs:label>kunna skapa funktionell design och layout och bildbehandla fotografiskt material för publicering i digitala miljöer och för tryck</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="F4">
+	<rdf:Description rdf:about="#F4">
 		<rdfs:label>självständigt kunna systematiskt genomföra, skriftligt dokumentera och muntligt presentera ett webbplatsutvecklingsprojekt i enlighet med för området etablerade akademiska och professionella principer och metoder</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="V1">
+	<rdf:Description rdf:about="#V1">
 		<rdfs:label>kunna värdera och kritiskt granska informationskällors relevans och pålitlighet, samt visa insikter om hur kunskapsutvecklingen inom området kan ha betydelse för samhället</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="V2">
+	<rdf:Description rdf:about="#V2">
 		<rdfs:label>kunna tillämpa informationsetiska principer och förhållningssätt vid planering, underhåll och drift av en organisations webbplats</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
-	<rdf:Description rdf:about="V3">
+	<rdf:Description rdf:about="#V3">
 		<rdfs:label>ha tillägnat sig förmåga att självständigt följa kunskapsutvecklingen inom området</rdfs:label>
-		<rdf:type rdf:resource="Outcome"/>
+		<rdf:type rdf:resource="#Outcome"/>
 	</rdf:Description>
 	
 </rdf:RDF>
